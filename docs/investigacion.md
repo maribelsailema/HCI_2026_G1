@@ -97,39 +97,34 @@ Un *touchpoint* es todo punto de interacción entre el usuario y el producto a t
 
 # 📋 Análisis de Usabilidad Inicial: Momentos de Verdad, Matriz Momento/Emoción y Fallas Críticas
 
-## ⚡ 1. Identificación y Análisis de los Momentos de Verdad (Moments of Truth - MoT)
+## ⚡ 1. Identificación y Análisis de los Momentos de Verdad 
 
 Los **Momentos de Verdad** corresponden a los puntos críticos del flujo donde el usuario experimenta el mayor grado de bloqueo, incertidumbre o frustración (**Nivel Emocional -2**), poniendo en riesgo la continuidad de la tarea.
 
-### 🔴 Momento de Verdad 1 (MoT-01): Visualización e Interpretación del Plan / Procedimiento
-* **Ubicación en el Sketch (`imgSketch.png`):** Sección central inferior *“Test plan / procedure: List the main steps of the test procedure”* (Contenedores numerados del 1 al 6 unidos por flecha discontinua).
+### 🔴 Momento de Verdad 1 : Visualización e Interpretación del Plan / Procedimiento
+* **Ubicación en el Sketch:** Test plan / procedure.
 * **Nivel Emocional Inicial:** **-2 (Máxima Frustración / Desorientación)**
 * **Diagnóstico del Problema:**
   * **Ausencia de affordance interactivo:** Los contenedores del 1 al 6 son simples cajas rectangulares planas y vacías. No comunican si son campos de texto editables, tarjetas arrastrables, etapas secuenciales o componentes informativos.
   * **Falta de visibilidad del estado (Nielsen #1):** No existe ninguna indicación visual que señale qué paso está activo, cuál está pendiente o cómo se progresa a través de la flecha punteada.
   * **Carga cognitiva elevada:** El usuario debe adivinar mentalmente la estructura cronológica de la prueba sin soporte del sistema.
-* **Evidencia Conductual (Think Aloud):**
-  > *“Veo los números del 1 al 6 con una flecha, pero no sé si debo hacer clic, escribir adentro o si se llenan solos. No hay nada que me indique por dónde voy ni qué pasa cuando termino un paso.”* (Demora observada: > 45 segundos de inactividad visual y clics erráticos sobre las cajas estáticas).
 
 ---
 
-### 🔴 Momento de Verdad 2 (MoT-02): Diligenciamiento y Verificación del Checklist Pre-prueba
-* **Ubicación en el Sketch (`imgSketch.png`):** Cuadrante inferior *“Review before the test (check if done)”* (Checkboxes de *Email Participants*, *Reminder participants*, *Ethical Approval*, *Recording consent form*, *Usability testing checklist*).
+### 🔴 Momento de Verdad 2 : Diligenciamiento y Verificación del Checklist Pre-prueba
+* **Ubicación en el Sketch:** Review before the test
 * **Nivel Emocional Inicial:** **-2 (Máxima Ansiedad / Duda Operativa)**
 * **Diagnóstico del Problema:**
   * **Violación de la Ley de Proximidad (Gestalt):** Los checkboxes, etiquetas descriptivas y campos de ingreso de fecha (*“Reminder #1 - Date:”, “Date sent:”*) se encuentran espacialmente desalineados y dispersos de forma asimétrica.
   * **Ambigüedad en la jerarquía de validación:** Los recordatorios de correo (*Reminder #1* y *#2*) están anidados dentro de una sección que mezcla fechas con casillas sin un patrón de lectura claro.
   * **Fricción por consecuencias críticas (Heurística #5: Prevención de errores):** Al tratarse de requisitos éticos y legales indispensables antes de la prueba (*Consent Form* y *Ethical Approval*), la desorganización visual genera miedo e incertidumbre de omitir aprobaciones obligatorias o ingresar fechas inválidas.
-* **Evidencia Conductual (Think Aloud):**
-  > *“Los checkboxes están unos más arriba que otros y las fechas de los recordatorios están sueltas. No tengo claro si al marcar la casilla ya queda guardado o si me falta llenar algo legal. Me da miedo avanzar sin saber si cumplí con la aprobación ética.”* (Comportamiento observado: Relectura reiterada de la misma sección y vacilación de selección).
-
 ---
 
 ## 📊 2. Matriz Momento / Emoción de la Prueba Inicial
 
-Esta matriz detalla el estado emocional, los problemas de usabilidad y la evidencia observada a lo largo de los **7 touchpoints clave** de la interfaz original (`imgSketch.png`), sustentando la **Curva Emocional Inicial** (`[-1, -1, 0, -2, 0, -2, +1]`):
+Esta matriz detalla el estado emocional, los problemas de usabilidad y la evidencia observada a lo largo de los **7 touchpoints clave** de la interfaz original, sustentando la **Curva Emocional Inicial** (`[-1, -1, 0, -2, 0, -2, +1]`):
 
-| # | Touchpoint (Punto de Contacto) | Elemento en el Sketch (`imgSketch.png`) | Clasificación | Emoción Inicial y Nivel | Problema de Usabilidad Detectado (Diseño Original) | Evidencia en la Prueba Inicial (*User Feedback*) | Heurística / Principio Vulnerado |
+| # | Touchpoint (Punto de Contacto) | Elemento en el Sketch | Clasificación | Emoción Inicial y Nivel | Problema de Usabilidad Detectado (Diseño Original) | Evidencia en la Prueba Inicial (*User Feedback*) | Heurística / Principio Vulnerado |
 |:---:|---|---|:---:|:---:|---|---|---|
 | **1** | **Acceso al Dashboard** | Encabezado (*USABILITY TEST PLAN DASHBOARD*, datos de contacto y fecha) | Touchpoint | **Incertidumbre / Confusión (-1)** | Estructura visual plana; la interfaz parece una plantilla estática de papel en lugar de un sistema de gestión interactivo. | El usuario duda si se encuentra en un editor de pruebas o en una vista previa no editable. | **Heurística #8:** Estética y diseño minimalista / Falta de profundidad visual. |
 | **2** | **Lectura de Requisitos** | Columna lateral izquierda (*Service/product, Business & User requirements*) | Touchpoint | **Frustración Leve (-1)** | Bloques rectangulares uniformes sin jerarquía tipográfica ni separación clara del área principal de trabajo. | *"No distingo qué bloques son informativos y cuáles son campos obligatorios para empezar"*. | **Ley de Región Común (Gestalt):** Falta de delimitación entre barra lateral y lienzo. |
@@ -152,7 +147,7 @@ Escala de Severidad de Nielsen:
 
 ---
 
-### 🚨 Falla 1: Cajas de Procedimiento Inertes y Desorientación Secuencial (MoT-01)
+### 🚨 Falla 1: Cajas de Procedimiento Inertes y Desorientación Secuencial
 * **Severidad:** **3 (Falla Mayor / Grave)**
 * **Heurística Vulnerada:** Heurística #1 de Nielsen (*Visibilidad del estado del sistema*) y Principio de Manipulación Directa de Shneiderman (*Affordance*).
 * **Descripción Técnica:** 
@@ -162,11 +157,11 @@ Escala de Severidad de Nielsen:
 
 ---
 
-### 🚨 Falla 2: Desalineación Espacial y Caos en el Checklist Previo (MoT-02)
+### 🚨 Falla 2: Desalineación Espacial y Caos en el Checklist Previo 
 * **Severidad:** **3 (Falla Mayor / Grave)**
 * **Heurística / Ley Vulnerada:** Ley de Proximidad de Gestalt y Heurística #5 de Nielsen (*Prevención de errores*).
 * **Descripción Técnica:** 
-  En el bloque *“Review before the test”*, los controles interactivos (*checkboxes*) conviven con campos de entrada de texto manual (*“Date:”, “Reminder #1 - Date:”*) sin una cuadrícula (*grid*) consistente. Las etiquetas no guardan proximidad visual uniforme con su casilla correspondiente, rompiendo la ley de proximidad.
+  En el bloque *“Review before the test”*, los controles interactivos (*checkboxes*) conviven con campos de entrada de texto manual sin una cuadrícula (*grid*) consistente. Las etiquetas no guardan proximidad visual uniforme con su casilla correspondiente, rompiendo la ley de proximidad.
 * **Impacto en el Usuario:** 
   Incrementa drásticamente la tasa de error por selección accidental y omisión de requisitos legales críticos (aprobación ética y consentimiento informado), provocando inseguridad y ansiedad respecto al cumplimiento del protocolo.
 
