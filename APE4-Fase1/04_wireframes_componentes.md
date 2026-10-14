@@ -4,6 +4,7 @@
 > En esta sección se detallan los wireframes de baja fidelidad para el flujo de pedidos de la cafetería universitaria (CaféU), identificando los componentes interactivos clave de cada pantalla para asegurar una experiencia de usuario clara y directa.
 
 ---
+Enlace al prototipo de Figma: https://www.figma.com/proto/0gS190p74dFGIG9LUkS6WE/Sin-t%C3%ADtulo?node-id=0-1&t=d68GzhFL1flgQdPi-1
 
 ## Detalle de Pantallas y Componentes
 
